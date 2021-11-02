@@ -1,5 +1,5 @@
 {
-    "name": "bcc/cron-manager-bundle",
+    "name": "phakpoom/cron-manager-bundle",
     "type": "symfony-bundle",
     "description": "A cron table manager bundle for Symfony",
     "keywords": ["cron management"],
