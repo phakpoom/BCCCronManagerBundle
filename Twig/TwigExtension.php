@@ -8,17 +8,7 @@ class TwigExtension extends \Twig_Extension implements \Twig_Extension_GlobalsIn
      * @var array
      */
     protected $wwwUser;
-
-    /**
-     * @var string
-     */
-    protected $logDir;
-
-    /**
-     * @var string
-     */
-    protected $symfonyCommand;
-
+    
     public function __construct($logDir, $projectDir)
     {
         if (function_exists('posix_getpwuid')) {
@@ -30,16 +20,12 @@ class TwigExtension extends \Twig_Extension implements \Twig_Extension_GlobalsIn
                 'dir'  => '-',
             );
         }
-        $this->logDir = $logDir;
-        $this->symfonyCommand = 'php '.$projectDir.'/bin/console';
     }
     
     public function getGlobals()
     {
         return array(
             'wwwUser'        => $this->wwwUser,
-            'logDir'         => $this->logDir,
-            'symfonyCommand' => $this->symfonyCommand,
         );
     }
 

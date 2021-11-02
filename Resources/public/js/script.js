@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $(".collapse").collapse();
     $('.time-input, .command-preset, .time-menu, .log-preset').tooltip({
-
+        placement: 'top',
     });
 
     var presets = {

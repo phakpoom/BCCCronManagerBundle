@@ -138,7 +138,7 @@
         <source>Wake up</source>
         <target>Wake up</target>
       </trans-unit>
-      <trans-unit erreurid="35">
+      <trans-unit id="35">
         <source>Suspend</source>
         <target>Suspend</target>
       </trans-unit>
