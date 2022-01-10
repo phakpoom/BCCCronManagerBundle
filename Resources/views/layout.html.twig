@@ -15,12 +15,25 @@
 <body>
 <div class="container my-5">
     {% for flashMessage in app.session.flashbag.get('message') %}
-          <div class="alert alert-info">{{ flashMessage }}</div>
+        <div class="alert alert-info">{{ flashMessage }}</div>
     {% endfor %}
 
     {% for flashMessage in app.session.flashbag.get('error') %}
-          <div class="alert alert-danger">{{ flashMessage }}</div>
+        <div class="alert alert-danger">{{ flashMessage }}</div>
     {% endfor %}
+
+    <div id="modal" class="modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"></h3>
+                </div>
+                <div class="modal-body">
+                    <pre></pre>
+                </div>
+            </div>
+        </div>
+    </div>
 
     {% block content %}{% endblock %}
 </div>
