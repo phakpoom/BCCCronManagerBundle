@@ -13,7 +13,7 @@ class CronManager
      *
      * @var array
      */
-    protected $lines = array();
+    protected $lines = [];
 
     /**
      * The error when using the comment 'crontab'
@@ -32,7 +32,7 @@ class CronManager
     public function __construct()
     {
         // parsing cron file
-        $process = new Process('crontab -l');
+        $process = new Process(['crontab', '-l']);
         $process->run();
         $lines = \array_filter(\explode(PHP_EOL, $process->getOutput()), function($line) {
             return '' != \trim($line);
@@ -98,7 +98,7 @@ class CronManager
 
         \file_put_contents($file, $this->getRaw().PHP_EOL);
 
-        $process = new Process('crontab '.$file);
+        $process = new Process(['crontab', $file]);
         $process->run();
 
         $this->error = $process->getErrorOutput();

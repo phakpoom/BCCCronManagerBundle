@@ -2,6 +2,7 @@
 
 namespace BCC\CronManagerBundle\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use \Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -12,15 +13,9 @@ use \BCC\CronManagerBundle\Manager\Cron;
 use \BCC\CronManagerBundle\Manager\CronManager;
 use \Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-
-class DefaultController extends Controller
+class DefaultController extends AbstractController
 {
-    /**
-     * Displays the current crons and a form to add a new one.
-     *
-     * @return Response
-     */
-    public function indexAction()
+    public function indexAction(): Response
     {
         $cm = new CronManager();
         $this->addFlashFromCronManager($cm);

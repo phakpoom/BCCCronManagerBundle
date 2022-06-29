@@ -5,31 +5,31 @@
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
     <route id="BCCCronManagerBundle_index" path="/">
-        <default key="_controller">BCCCronManagerBundle:Default:index</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::indexAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_edit" path="/{id}/edit">
-        <default key="_controller">BCCCronManagerBundle:Default:edit</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::editAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_add" path="/add" methods="POST">
-        <default key="_controller">BCCCronManagerBundle:Default:add</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::addAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_wakeup" path="/{id}/wakeup">
-        <default key="_controller">BCCCronManagerBundle:Default:wakeup</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::wakeupAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_suspend" path="/{id}/suspend">
-        <default key="_controller">BCCCronManagerBundle:Default:suspend</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::suspendAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_remove" path="/{id}/remove">
-        <default key="_controller">BCCCronManagerBundle:Default:remove</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::removeAction</default>
     </route>
 
     <route id="BCCCronManagerBundle_file" path="/{id}/file/{type}">
-        <default key="_controller">BCCCronManagerBundle:Default:file</default>
+        <default key="_controller">BCC\CronManagerBundle\Controller\DefaultController::fileAction</default>
         <requirement key="type">log|error</requirement>
     </route>
 </routes>
