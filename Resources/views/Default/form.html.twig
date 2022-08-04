@@ -96,7 +96,7 @@
         {{- form_widget(form.logFile, {'attr':{'class': 'form-control'}}) }}
         <div class="input-group-append">
             <button type="button" class="btn btn-default log-preset pull-right"
-                    value="{{ '/{{var|home/ubuntu}}/www/{{EDITME}}/shared/var/logs/example.log' }}"
+                    value="{{ '/{{var|home/ubuntu}}/www/{{EDITME}}/shared/var/log/example.log' }}"
                     data-original-title="{{ 'Symfony log directory' | trans({}, 'BCCCronManagerBundle') }}">
                 {{ 'Guide Fill' }}
             </button>
@@ -115,7 +115,7 @@
         {{- form_widget(form.errorFile, {'attr':{'class': 'form-control'}}) }}
         <div class="input-group-append">
             <button type="button" class="btn btn-default log-preset pull-right"
-                    value="{{ '/{{var|home/ubuntu}}/www/{{EDITME}}/shared/var/logs/example.error' }}"
+                    value="{{ '/{{var|home/ubuntu}}/www/{{EDITME}}/shared/var/log/example.error' }}"
                     data-original-title="{{ 'Symfony log directory' | trans({}, 'BCCCronManagerBundle') }}">
                 {{ 'Guide Fill' }}
             </button>
